@@ -1,0 +1,31 @@
+Merge Sort
+
+Technique : Divide and Conquer
+Efficiency : nlog(n)
+
+
+MergeSort(A[n]) {
+    if (n > 1) {
+        copy(A[0, _n/2_ - 1] to B[0, _n/2_ - 1])
+        copy(A[_n/2_, n - 1] to C[0, _n/2 - 1])
+        MergeSort(B)
+        MergeSort(C)
+        Merge(A, B, C)
+    }
+}
+
+Merge(A[0, p + q], B[0, p], C[0, q]) {
+    i = j = k = 0;
+    while ( i < p && j < q) {
+        if (B[i] <= C[j])
+            A[k] = B[i]; i++;
+        else 
+            A[k] = C[j]; j++;
+        k++;
+    }
+
+    if(i == p) 
+        copy(C[j, q] to A[k, p + q])
+    else
+        copy(B[i, p] to A[k, p + q])
+}

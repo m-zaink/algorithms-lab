@@ -1,0 +1,44 @@
+Heap sort is a comparison based sorting technique based on Binary Heap data structure.
+
+Since a Binary Heap is a Complete Binary Tree, it can be easily represented as array 
+and array based representation is space efficient. If the parent node is stored at index I,
+the left child can be calculated by 2 * I + 1 and right child by 2 * I + 2 (assuming the
+indexing starts at 0).
+
+1. Build a max heap from the input data.
+2. At this point, the largest item is stored at the root of the heap. 
+Replace it with the last item of the heap followed by reducing the size
+of heap by 1. Finally, heapify the root of tree.
+3. Repeat above steps while size of heap is greater than 1.
+
+Input : Array of number A[n]
+Output : Sorted Array A[n] in ascending order
+
+heapify(A[], n, i) {
+    largest = i;
+    l = 2 * i + 1;
+    r = 2 * i + 2;
+
+    if(l < n && A[l] > A[largest])
+        largest = l;
+    
+    if(r < n && A[l] > A[largest])
+        largest = r;
+    
+    if(largest != i) {
+        swap(A[i], A[largest]);
+
+        heapify(A, n, largest);
+    }
+}
+
+heapSort(A[], n) {
+    for(i = n/2 - 1; i >= 0; i--) {
+        heapify(A, n, i);
+    }
+
+    for(i = n - 1; i >= 0; i--) {
+        swap(A[0], A[i]);
+        heapify(A, i, 0);
+    }
+}

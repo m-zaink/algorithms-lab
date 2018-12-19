@@ -1,0 +1,20 @@
+Binary Search is a very efficient(log2(n)) algorithm for searching in a sorted array.
+
+Technique used : Divide and Conquer.
+Efficiency : log2(n)
+
+Input : Array A[n], key, h, l
+Output : Index of element in A[] if found, else -1
+
+Binary(A, n, l, h) {
+    if(l > h) return -1;
+
+    mid = (l + h) / 2;
+
+    if(A[mid] == key) 
+        return mid;
+    else if (A[mid] > key) 
+        l = mid + 1;
+    else 
+        h = mid - 1;
+}

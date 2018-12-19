@@ -1,0 +1,10 @@
+Topological Sorting : This is a linear ordering of vertices such that for every
+edge uv, vertex u comes before vertex v.
+
+input : A Directed Acyclic Graph(DAG)
+output : Ordering of the graph.
+
+1. Find a source vertex. Remove it and all the corresponding vertices.
+2. In the new greph, repeat 1 until all the vertices have been removed.
++ The order in which the sources are removes forms the Topological Sort for
+the given DAG.

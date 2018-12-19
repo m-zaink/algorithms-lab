@@ -1,0 +1,29 @@
+Horspool String Matching Algorithm :
+
+Input : String s, Pattern p
+
+ShiftTable(P[n], Table[256]) {
+    for all i in range (0, 256)
+        Table[i] do Table[i] = m;
+    
+    for j = 0 to n - 2
+        Table[P[j]] = m - 1 - j;
+    
+    return Table
+}
+
+
+Horspool(S[n], P[m]) {
+    Table = ShiftTable(P, Table);
+
+    for(i = m - 1; i < n; i = i + Table[T[i]]) {
+        k = 0;
+        while(k < m && P[m - 1 - k] = T[i - k])
+            k++
+        
+        if (k == m)
+            return i - m + 1;
+    }
+
+    return -1; 
+}

@@ -1,0 +1,32 @@
+Breadth First Search 
+
+Technique : Brute Force
+Efficiency : O(v + e) in AL, O(v^2) in AM
+
+Input : Graph (V, E)
+Output : Order in which the vertices were visited.
+
+Breadth First Search(Start)
+
+mark all vertices in V with 0, indicating not visited
+count = 0;
+for each vertex v in V {
+    if(v is marked with 0) {   
+        bfs(v)
+    }
+}
+
+
+bfs(v) {
+    count++;
+    mark v with count and initialise a queue with v
+    while the queue is not empty {
+        for each vertex w in V adjacent to the front vertex
+            if w is marked with 0
+                count ++
+                mark w with count
+                add w to the qeueu
+        
+        remove the front vertex from the queue
+    }
+}

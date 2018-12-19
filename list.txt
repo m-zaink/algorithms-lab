@@ -1,0 +1,39 @@
+1. Divide and Conquer
+a. Binary Search
+b. MaxMin
+
+2. Merge Sort and running time
+
+3. Quick Sort and running time
+
+4. 
+a. Topological Ordering
+b. Insertion Sort
+
+5. 
+a. DFS
+b. BFS
+
+6. Heap Sort
+
+7. 
+a. Hoorspool String Matching
+b. AVL Tree
+8. (Dynamic Programming)
+
+a. Knapsack
+b. Transitive Closure
+
+9. (Dynamic Programming)
+a. Floyd's algorithm
+b. Binomial Co-efficient
+
+10. Dijikstra's algorithm
+
+11. Prims algorithm
+
+12. Kruskal's algorithm
+
+13. Sum of Subset
+
+14. N-Queen's problem

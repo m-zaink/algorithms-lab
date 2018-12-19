@@ -1,0 +1,2 @@
+Most of the BST opertions take O(h), h = height of the tree
+or O(logN), n = number of nodes in the tree.

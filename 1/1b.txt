@@ -1,0 +1,16 @@
+This algorithm tries the find the maximum and minimum of an element
+using recursion
+
+Technique : Divide and Conquere, Recursion
+Efficiency : 
+
+input : Array A[n]
+output : Pointers to the maximum and minimum elements of the Array
+
+MaxMin(A[], *max, *min, int index) {
+    if(index == n - 1) return;
+
+    if(A[index] > *max) max = &A[index];
+    if(A[index] < *min) min = &A[index];
+    index++;
+}

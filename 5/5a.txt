@@ -1,0 +1,23 @@
+Depth First Search
+
+Technique : Brute Force
+Efficiency : O(v + e) in adjacency list, O(v^2) in adjacency matrix
+
+
+Input : Graph (V, E)
+Output : The order in which vertices were visited
+
+Depth Fist Search (Start)
+mark all vertices in V with 0 to indicate unvisited.
+count = 0
+for each vertex v in V 
+    if v is marked with 0
+        dfs(v)
+
+
+dfs(v) {
+    count++
+    for each vertex w in V adjacent to V
+        if w is marked with 0
+            dfs(w)
+}
